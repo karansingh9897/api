@@ -1,0 +1,25 @@
+{
+  "name": "Face Recognition API",
+  "image": "mcr.microsoft.com/devcontainers/python:3.9",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.9"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.flake8"
+      ]
+    }
+  },
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": {
+      "visibility": "public"
+    }
+  },
+  "postCreateCommand": "pip install -r requirements.txt"
+}
