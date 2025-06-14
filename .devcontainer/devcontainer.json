@@ -1,5 +1,5 @@
 {
-  "name": "Face Recognition API",
+  "name": "Face Recognition FastAPI",
   "image": "mcr.microsoft.com/devcontainers/python:3.9",
   "features": {
     "ghcr.io/devcontainers/features/common-utils:2": {},
@@ -15,11 +15,11 @@
       ]
     }
   },
-  "forwardPorts": [5000],
+  "forwardPorts": [8000],
   "portsAttributes": {
-    "5000": {
+    "8000": {
       "visibility": "public"
     }
   },
-  "postCreateCommand": "pip install -r requirements.txt"
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y libgl1-mesa-glx libglib2.0-0 libsm6 libxext6 libxrender-dev libgomp1 libfontconfig1 && pip install -r requirements.txt"
 }
